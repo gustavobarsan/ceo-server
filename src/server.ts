@@ -44,10 +44,8 @@ const subscribe = (call: any) => {
     call.write({ message })
   }
 
-  // Adiciona o callback do assinante
   topics.get(topic)?.add(subscriberCallback)
 
-  // Remove o callback quando a conexão é cancelada
   call.on("cancelled", () => {
     console.log(`Unsubscribed from topic: ${topic}`)
     topics.get(topic)?.delete(subscriberCallback)
