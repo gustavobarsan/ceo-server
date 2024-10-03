@@ -46,10 +46,10 @@ const subscribe = (call: any) => {
 
   topics.get(topic)?.add(subscriberCallback)
 
-  call.on("cancelled", () => {
-    console.log(`Unsubscribed from topic: ${topic}`)
-    topics.get(topic)?.delete(subscriberCallback)
-  })
+  // call.on("cancelled", () => {
+  //   console.log(`Unsubscribed from topic: ${topic}`)
+  //   topics.get(topic)?.delete(subscriberCallback)
+  // })
 }
 
 export class Server {
