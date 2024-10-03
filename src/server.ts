@@ -63,7 +63,7 @@ export class Server {
     })
 
     this.server.bindAsync(
-      `127.0.0.1:${port}`,
+      `0.0.0.0:${port}`,
       ServerCredentials.createInsecure(),
       (error, _port) => {
         if (error) {
@@ -71,7 +71,7 @@ export class Server {
           return
         }
 
-        console.log(`Server running at http://127.0.0.1:${port}`)
+        console.log(`Server running at http://0.0.0.0:${port}`)
       }
     )
   }
