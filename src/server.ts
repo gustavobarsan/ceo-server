@@ -53,13 +53,13 @@ const subscribe = (call: any) => {
   })
 
   call.on("end", () => {
-    console.log("Client finished sending messages");
-    call.end();
-  });
+    console.log("Client finished sending messages")
+    call.end()
+  })
 
   call.on("error", (error: any) => {
-    console.error("Error occurred in the call:", error);
-  });
+    console.error("Error occurred in the call:", error)
+  })
 }
 
 export class Server {
