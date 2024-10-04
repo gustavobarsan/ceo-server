@@ -49,7 +49,7 @@ const subscribe = (call: any) => {
   call.on("cancelled", () => {
     console.log(`Unsubscribed from topic: ${topic}`)
     topics.get(topic)?.delete(subscriberCallback)
-    subscribe(call)
+    call.end()
   })
 }
 
