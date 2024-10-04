@@ -51,6 +51,15 @@ const subscribe = (call: any) => {
     topics.get(topic)?.delete(subscriberCallback)
     call.end()
   })
+
+  call.on("end", () => {
+    console.log("Client finished sending messages");
+    call.end();
+  });
+
+  call.on("error", (error: any) => {
+    console.error("Error occurred in the call:", error);
+  });
 }
 
 export class Server {

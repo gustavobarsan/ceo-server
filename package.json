@@ -1,6 +1,6 @@
 {
   "name": "ceo-server",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "src/index.js",
   "scripts": {
     "build": "tsc",
